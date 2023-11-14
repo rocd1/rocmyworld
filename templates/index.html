@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Blog by Roc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+    <style>
+        /* Custom Styles */
+        .navbar-lightgreen {
+            background-color: lightgreen;
+        }
+
+        .navbar-lightgreen .navbar-nav .nav-link {
+            color: #333; /* Set text color to a readable color on lightgreen background */
+        }
+
+        .navbar-lightgreen .navbar-nav .nav-link:hover,
+        .navbar-lightgreen .navbar-nav .nav-link:focus {
+            color: #fff; /* Set text color on hover or focus */
+            background-color: #28a745; /* Set background color on hover or focus */
+        }
+
+        .box{
+            background: linear-gradient(to right, #112a17, rgb(4, 31, 4));
+            padding: 10px;
+            margin: 30px;
+            border-radius: 10px;
+            color: #fff;
+        }
+        h4 {
+            font-weight: bold;
+        }
+
+        .article{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+            font-weight: bold;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 2px 3px 5px #112a17;
+        }
+    
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-lightgreen">
+        <a class="navbar-brand" href="#">BLOG BY ROC</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage.html">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Coaching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Other sections (About, Image Gallery, etc.) -->
+    <!-- Booking Appointment Section -->
+    <div class="box">
+
+        <section class="container mt-5">
+            <h2>Coaching Session</h2>
+            <form action="{{ url_for('book_appointment') }}" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="date">Date</label>
+                        <input type="date" class="form-control" id="date" name="date" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="time">Time</label>
+                        <input type="time" class="form-control" id="time" name="time" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Book</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="article">
+        <h4>Basic Tutorial:</h4>
+        <p>Google Docs</p>
+        <p>Canva</p>
+        <p>Premier Pro</p>
+        <p>Ms Word</p>
+        <p>Ms Excel</p>
+        <p>Wix</p>
+        <p>Wordpress</p>
+        <p>Chatgpt</p>
+        <p>Qr Codes</p>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray text-center py-3 mt-5">
+        <div class="container">
+            <h4>Journal by Roc</h4>
+            <!-- Social Media Icons -->
+            <a href="#" class="text-gray"><i class="fab fa-facebook-f fa-lg mr-3"></i></a>
+            <a href="#" class="text-gray"><i class="fab fa-twitter fa-lg mr-3"></i></a>
+            <a href="#" class="text-gray"><i class="fab fa-instagram fa-lg mr-3"></i></a>
+            <a href="#" class="text-gray"><i class="fab fa-linkedin-in fa-lg"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
